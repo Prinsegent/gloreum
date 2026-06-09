@@ -199,23 +199,23 @@ function HeroSection() {
 
         <div className="relative w-fit h-fit flex items-center justify-center">
 
-          <div className="absolute w-[36rem] h-[36rem] rounded-full bg-cyan-300/20 blur-[120px]" />
-          <div className="absolute w-[30rem] h-[30rem] rounded-full border border-cyan-300/30" />
-          <div className="absolute w-[24rem] h-[24rem] rounded-full border border-white/20 animate-pulse" />
-          <div className="absolute w-[18rem] h-[18rem] rounded-full border border-cyan-200/20 animate-ping" />
+          <div className="absolute w-[18rem] h-[18rem] md:w-[36rem] md:h-[36rem] rounded-full bg-cyan-300/20 blur-[80px] md:blur-[120px]" />
+<div className="absolute w-[15rem] h-[15rem] md:w-[30rem] md:h-[30rem] rounded-full border border-cyan-300/30" />
+<div className="absolute w-[12rem] h-[12rem] md:w-[24rem] md:h-[24rem] rounded-full border border-white/20 animate-pulse" />
+<div className="absolute w-[9rem] h-[9rem] md:w-[18rem] md:h-[18rem] rounded-full border border-cyan-200/20 animate-ping" />
 
-          <img
-            src="/water-crystal.png"
-            className="w-56 h-56 md:w-64 md:h-64 animate-spinClockwise drop-shadow-[0_0_50px_white]"
-            alt="crystal"
-          />
+<img
+  src="/water-crystal.png"
+  className="w-36 h-36 sm:w-44 sm:h-44 md:w-64 md:h-64 animate-spinClockwise drop-shadow-[0_0_50px_white]"
+  alt="crystal"
+/>
 
         </div>
 
       </div>
 
       <div className="text-center pb-16 px-6">
-        <p className="text-xl md:text-3xl font-bold">
+        <p className="text-lg sm:text-xl md:text-3xl font-bold leading-relaxed max-w-5xl mx-auto">
           Gloreum® is a Human Participation, Validation and Rewards Ecosystem powered by AI and an Ethereum-derived blockchain network.
         </p>
       </div>
