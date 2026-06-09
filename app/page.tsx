@@ -193,7 +193,7 @@ function HeroSection() {
   return (
     <section className="relative min-h-screen pt-28 bg-[url('/bg1.jpg')] bg-cover bg-center flex flex-col overflow-hidden">
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
+      {/* REMOVED OVERLAY */}
 
       <div className="flex flex-1 items-center justify-center relative">
 
@@ -260,7 +260,7 @@ function Divider({ crystal, side = "center" }: any) {
 }
 
 /* =========================
-   SECTION (UPDATED CTA ONLY)
+   SECTION (OVERLAY REMOVED)
 ========================= */
 function Section({
   id,
@@ -277,7 +277,7 @@ function Section({
   return (
     <section id={id} className={`min-h-screen flex items-center relative bg-cover bg-center ${bg}`}>
 
-      <div className="absolute inset-0 bg-black/50" />
+      {/* REMOVED OVERLAY */}
 
       <div className={`relative z-10 w-full max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-14 ${
         side === "right" ? "md:flex-row-reverse" : ""
@@ -285,7 +285,7 @@ function Section({
 
         <div className="max-w-2xl w-full">
 
-          <div className="border border-white/10 bg-black/30 backdrop-blur-md rounded-2xl p-8 md:p-10">
+          <div className="border border-white/10 bg-black/30 backdrop-blur-sm rounded-2xl p-8 md:p-10">
 
             <p className={`${accent} text-xs tracking-[0.35em] mb-3`}>
               {number} • {chapter}
@@ -295,7 +295,6 @@ function Section({
 
             <p className="mt-6 text-white/80">{desc}</p>
 
-            {/* CTA FIX */}
             <div className="mt-8 flex flex-wrap gap-4">
 
               <Link
@@ -305,7 +304,6 @@ function Section({
                 Explore Module →
               </Link>
 
-              {/* ALWAYS show for Participate */}
               {(hrefSecondary || id === "participate") && (
                 <Link
                   href={hrefSecondary || "/get"}
@@ -333,39 +331,24 @@ function Footer() {
   return (
     <footer className="relative bg-gradient-to-r from-[#120018] via-[#1a0025] to-[#2a0018] backdrop-blur-md border-t border-white/10 py-12">
 
-      {/* top glow line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent" />
 
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
 
-        {/* LEFT: COPYRIGHT */}
         <div className="text-white/60 text-sm">
           © {new Date().getFullYear()} Gloreum Ecosystems. All rights reserved.
         </div>
 
-        {/* CENTER: GOLD BRAND */}
         <div className="text-sm font-semibold tracking-[0.3em] bg-gradient-to-r from-yellow-300 via-yellow-500 to-orange-400 bg-clip-text text-transparent">
           GLOREUM
         </div>
 
-        {/* RIGHT: SOCIAL LINKS */}
         <div className="flex gap-6 text-white/60 text-sm">
 
-          <a href="#" className="hover:text-yellow-300 transition">
-            Twitter
-          </a>
-
-          <a href="#" className="hover:text-yellow-300 transition">
-            Telegram
-          </a>
-
-          <a href="#" className="hover:text-yellow-300 transition">
-            GitHub
-          </a>
-
-          <a href="#" className="hover:text-yellow-300 transition">
-            Docs
-          </a>
+          <a href="#" className="hover:text-yellow-300 transition">Twitter</a>
+          <a href="#" className="hover:text-yellow-300 transition">Telegram</a>
+          <a href="#" className="hover:text-yellow-300 transition">GitHub</a>
+          <a href="#" className="hover:text-yellow-300 transition">Docs</a>
 
         </div>
 
