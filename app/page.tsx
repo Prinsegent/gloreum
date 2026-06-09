@@ -40,7 +40,7 @@ const modules = [
       "The participation execution engine of the Gloreum ecosystem where user actions are transformed into Mining Energy streams. These streams activate Crystal-specific Gloret generation under PPV validation rules, ensuring structured participation-to-asset conversion.",
     bg: "bg-[url('/bg2.jpg')]",
     accent: "text-cyan-400",
-    crystal: "/water-crystal.png",
+    crystal: "/air-crystal.png",
     dividerSide: "center",
   },
   {
@@ -68,7 +68,7 @@ const modules = [
       "The enterprise execution layer responsible for decentralized coordination, production logic, and Gems-based economic orchestration. G-CORE integrates on-chain participation and validation with real-world enterprise activity and structured revenue generation.",
     bg: "bg-[url('/bg4.jpg')]",
     accent: "text-orange-400",
-    crystal: "/air-crystal.png",
+    crystal: "/man-crystal.png",
     dividerSide: "left",
   },
   {
@@ -82,7 +82,7 @@ const modules = [
       "A circles-based participation and relationship system that maps human interactions into structured social clusters. These clusters contribute to participation, enterprise execution, scoring, validation pathways, and ecosystem trust topology under PPV logic.",
     bg: "bg-[url('/bg5.jpg')]",
     accent: "text-pink-400",
-    crystal: "/man-crystal.png",
+    crystal: "/earth-crystal.png",
     dividerSide: "right",
   },
   {
@@ -96,7 +96,7 @@ const modules = [
       "A controlled multi-route liquidity and asset exchange system defining structured value movement across ecosystem actors including Persons, Institutions, Validators, G-COREs, and Treasury layers. THEE ensures regulated flow of Gloreum assets across defined exchange paths.",
     bg: "bg-[url('/bg6.jpg')]",
     accent: "text-blue-400",
-    crystal: "/earth-crystal.png",
+    crystal: "/air-crystal.png",
     dividerSide: "left",
   },
   {
@@ -124,7 +124,7 @@ const modules = [
       "AVISS is Gloreum's voice-based identity, authentication, and authorization framework. It combines voice biometrics, cryptographic verification, and behavioral validation mechanisms to enable secure identity confirmation, transaction approval, enterprise authorization, and ecosystem participation.",
     bg: "bg-[url('/bg8.jpg')]",
     accent: "text-indigo-400",
-    crystal: "/air-crystal.png",
+    crystal: "/man-crystal.png",
     dividerSide: "left",
   },
   {
@@ -138,7 +138,7 @@ const modules = [
       "Human Advancement Vehicles are structured development pathways designed to assist participants in progressing through educational, economic, entrepreneurial, technological, and social advancement journeys. HAVs align ecosystem participation with measurable human development outcomes.",
     bg: "bg-[url('/bg9.jpg')]",
     accent: "text-emerald-400",
-    crystal: "/man-crystal.png",
+    crystal: "/earth-crystal.png",
     dividerSide: "right",
   },
   {
@@ -152,7 +152,7 @@ const modules = [
       "The tokenomics framework governs the issuance, circulation, utility, treasury interaction, exchange routing, and economic behavior of GET (Gloreum Eternal Token) within the ecosystem. It aligns incentives across participants, enterprises, exchanges, and ecosystem infrastructure.",
     bg: "bg-[url('/bg10.jpg')]",
     accent: "text-yellow-400",
-    crystal: "/water-crystal.png",
+    crystal: "/air-crystal.png",
     dividerSide: "left",
   },
   {
@@ -166,7 +166,7 @@ const modules = [
       "A phased execution model defining progressive deployment of Gloreum infrastructure layers including participation systems, assetomics rollout, enterprise activation, and exchange layer expansion.",
     bg: "bg-[url('/bg11.jpg')]",
     accent: "text-red-400",
-    crystal: "/fire-crystal.png",
+    crystal: "/man-crystal.png",
     dividerSide: "right",
   },
   {
@@ -198,15 +198,18 @@ function HeroSection() {
       <div className="flex flex-1 items-center justify-center relative">
 
         <div className="relative w-fit h-fit flex items-center justify-center">
+      
+    
 
-          <div className="absolute w-[18rem] h-[18rem] md:w-[36rem] md:h-[36rem] rounded-full bg-cyan-300/20 blur-[80px] md:blur-[120px]" />
-<div className="absolute w-[15rem] h-[15rem] md:w-[30rem] md:h-[30rem] rounded-full border border-cyan-300/30" />
-<div className="absolute w-[12rem] h-[12rem] md:w-[24rem] md:h-[24rem] rounded-full border border-white/20 animate-pulse" />
-<div className="absolute w-[9rem] h-[9rem] md:w-[18rem] md:h-[18rem] rounded-full border border-cyan-200/20 animate-ping" />
+    {/* RING MIDDLE */}
+    <div className="absolute w-[24rem] h-[24rem] rounded-full border border-white/20 animate-pulse" />
+
+    {/* RING INNER */}
+    <div className="absolute w-[18rem] h-[18rem] rounded-full border border-cyan-200/20 animate-ping" />
 
 <img
   src="/water-crystal.png"
-  className="w-36 h-36 sm:w-44 sm:h-44 md:w-64 md:h-64 animate-spinClockwise drop-shadow-[0_0_50px_white]"
+  className="w-56 h-56 md:w-64 sm:h-64 md:w-64 md:h-64 animate-spinClockwise drop-shadow-[0_0_50px_white]"
   alt="crystal"
 />
 
