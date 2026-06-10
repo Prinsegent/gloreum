@@ -187,38 +187,30 @@ const modules = [
 ];
 
 /* =========================
-   HERO SECTION
+   HERO SECTION (UPDATED)
 ========================= */
 function HeroSection() {
   return (
     <section className="relative min-h-screen pt-28 bg-[url('/bg1.jpg')] bg-cover bg-center flex flex-col overflow-hidden">
 
-      {/* REMOVED OVERLAY */}
-
       <div className="flex flex-1 items-center justify-center relative">
-
         <div className="relative w-fit h-fit flex items-center justify-center">
-      
-    
 
-    {/* RING MIDDLE */}
-    <div className="absolute w-[24rem] h-[24rem] rounded-full border border-white/20 animate-pulse" />
+          {/* RINGS */}
+          <div className="absolute w-[24rem] h-[24rem] rounded-full border border-white/20 animate-pulse" />
+          <div className="absolute w-[18rem] h-[18rem] rounded-full border border-cyan-200/20 animate-ping" />
 
-    {/* RING INNER */}
-    <div className="absolute w-[18rem] h-[18rem] rounded-full border border-cyan-200/20 animate-ping" />
-
-<img
-  src="/water-crystal.png"
-  className="w-56 h-56 md:w-64 sm:h-64 md:w-64 md:h-64 animate-spinClockwise drop-shadow-[0_0_50px_white]"
-  alt="crystal"
-/>
-
+          <img
+            src="/water-crystal.png"
+            className="w-56 h-56 md:w-64 md:h-64 animate-spinClockwise drop-shadow-[0_0_50px_white]"
+            alt="crystal"
+          />
         </div>
-
       </div>
 
+      {/* ================= UPDATED TEXT ================= */}
       <div className="text-center pb-16 px-6">
-        <p className="text-lg sm:text-xl md:text-3xl font-bold leading-relaxed max-w-5xl mx-auto">
+        <p className="text-xl md:text-3xl lg:text-5xl font-bold text-[#Ffffff] leading-relaxed tracking-wide font-[Cinzel]">
           Gloreum® is a Human Participation, Validation and Rewards Ecosystem powered by AI and an Ethereum-derived blockchain network.
         </p>
       </div>
@@ -233,7 +225,6 @@ function HeroSection() {
 function Divider({ crystal, side = "center" }: any) {
   return (
     <div className="relative w-full h-24 z-20">
-
       <div className="absolute inset-0 bg-[#12001f]" />
       <div className="absolute inset-0 bg-black/20" />
 
@@ -244,84 +235,68 @@ function Divider({ crystal, side = "center" }: any) {
           ? "justify-end px-10"
           : "justify-center"
       }`}>
-
         <div className="relative flex items-center justify-center">
-
           <div className="absolute w-32 h-32 bg-purple-500/20 blur-2xl rounded-full" />
-
           <img
             src={crystal}
             alt="divider crystal"
             className="h-20 w-auto animate-spinClockwise drop-shadow-[0_0_25px_rgba(168,85,247,0.8)]"
           />
-
         </div>
       </div>
-
     </div>
   );
 }
 
 /* =========================
-   SECTION (OVERLAY REMOVED)
+   SECTION
 ========================= */
-function Section({
-  id,
-  side,
-  number,
-  chapter,
-  title,
-  desc,
-  bg,
-  accent,
-  hrefPrimary,
-  hrefSecondary,
-}: any) {
+function Section(props: any) {
   return (
-    <section id={id} className={`min-h-screen flex items-center relative bg-cover bg-center ${bg}`}>
-
-      {/* REMOVED OVERLAY */}
-
-      <div className={`relative z-10 w-full max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-14 ${
-        side === "right" ? "md:flex-row-reverse" : ""
-      }`}>
-
+    <section
+      id={props.id}
+      className={`min-h-screen flex items-center relative bg-cover bg-center ${props.bg}`}
+    >
+      <div
+        className={`relative z-10 w-full max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-14 ${
+          props.side === "right" ? "md:flex-row-reverse" : ""
+        }`}
+      >
         <div className="max-w-2xl w-full">
-
           <div className="border border-white/10 bg-black/30 backdrop-blur-sm rounded-2xl p-8 md:p-10">
 
-            <p className={`${accent} text-xs tracking-[0.35em] mb-3`}>
-              {number} • {chapter}
+            <p className={`${props.accent} text-xs tracking-[0.35em] mb-3`}>
+              {props.number} • {props.chapter}
             </p>
 
-            <h2 className="text-3xl md:text-5xl font-bold">{title}</h2>
+            <h2 className="text-3xl md:text-5xl font-bold">
+              {props.title}
+            </h2>
 
-            <p className="mt-6 text-white/80">{desc}</p>
+            <p className="mt-6 text-white/80">
+              {props.desc}
+            </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-
               <Link
-                href={hrefPrimary || "#"}
-                className={`px-5 py-2 rounded-lg border border-white/20 hover:border-white/50 transition font-semibold ${accent}`}
+                href={props.hrefPrimary || "#"}
+                className={`px-5 py-2 rounded-lg border border-white/20 hover:border-white/50 transition font-semibold ${props.accent}`}
               >
                 Explore Module →
               </Link>
 
-              {(hrefSecondary || id === "participate") && (
+              {(props.hrefSecondary || props.id === "participate") && (
                 <Link
-                  href={hrefSecondary || "/get"}
+                  href={props.hrefSecondary || "/get"}
                   className="px-5 py-2 rounded-lg border border-white/10 text-white/70 hover:text-white hover:border-white/40 transition"
                 >
                   Get Gloreum →
                 </Link>
               )}
-
             </div>
 
           </div>
-
         </div>
-
       </div>
     </section>
   );
@@ -347,12 +322,10 @@ function Footer() {
         </div>
 
         <div className="flex gap-6 text-white/60 text-sm">
-
           <a href="#" className="hover:text-yellow-300 transition">Twitter</a>
           <a href="#" className="hover:text-yellow-300 transition">Telegram</a>
           <a href="#" className="hover:text-yellow-300 transition">GitHub</a>
           <a href="#" className="hover:text-yellow-300 transition">Docs</a>
-
         </div>
 
       </div>
